@@ -1,0 +1,241 @@
+// nesting 
+
+
+/* 
+
+
+nah dimateri kali ini kita akan mulai membahas fitur fitur utama
+pada sass dan kita akan membahas mengenai nesting
+
+atau bagaimana  cara kita menuliskan sintax css secara bersarang
+tapi intinya nesting ini untuk membuat herarki visual yang jelas
+untuk selector css kita
+
+kalo gitu kita langsung lihat saja bagaimana
+cara penggunaan dari nesting ini
+
+
+
+==========================================================>
+
+nah setelah mengatur pembuatan folder secara otomatis oleh
+compilernya
+
+
+*/
+
+// misalkan kita coba seperti ini
+
+
+// 1.penerapan nesting
+
+// .main{
+//     background-color: lightblue;
+//     .main-heading{
+//         font-size: 2em;
+//     }
+//     .main-paragraph{
+//         font-size: 1.2em;
+//     }
+// }
+
+
+/* 
+2. daftar selector
+
+nah selanjutnya kita juga bisa menerapkan daftar selector dengan mudah
+menggunakan nesting ini
+
+nah kalo kita lihat dalam htmlnya itu ada h1 dan p yang ada didalam heading
+dan h1 dan p yang ada didalam footer
+
+nah ceritanya kita mau memberikan style untuk ke empat element tersebut
+kalo pakai css kalian bisa gini
+
+.main h1, .main p, footer h1,footer p{
+}
+
+
+nah kalo kalian pakai sass kalian bisa menuslikan seperti ini
+
+*/
+
+// .main, footer{
+//     h1, p{
+//         letter-spacing: 2px;
+//     }
+// }
+
+/* 
+
+jadi ini bacanya saya akan memberikan leeter spacing pada h1 dan p
+yang ada ddialam footer dan main
+
+
+atau didalam tag main dan footer 
+saya akan berikan h1 dan p nya itu letter spacing
+
+
+*/
+
+
+/* 
+3. karakter & pada sass
+
+karakter & ini disebutnya adalah parent selector
+dimana dia dapat megambil paretnya saat kita tuliskan 
+pada childnya
+
+jadi kita bisa mentarget element parentnya pada saat kita 
+melakukan nesting
+
+contohnya seperti ini
+
+
+*/
+
+// .main {
+//     .container & {
+//         background-color: lightblue;
+//     }
+//     .main-heading{
+//         font-size: 2em;
+//     }
+// }
+
+/* 
+maka dia akan menterget element container main
+jadi yang ditarget itu adalah mainnya
+
+
+*/
+
+
+/* 
+
+4. sudo class seperti hover active link visited
+
+nah parent selector juga bisa digunakan untuk
+melakukan sudo class
+
+nah saya ingin ketika saya sorot mainnya
+backgroun colornya berubah menjadi merah misalnya
+
+jadi kita tinggal tulis seperti ini
+
+*/
+
+// .main {
+//     .container & {
+//         background-color: lightblue;
+//     }
+//     .main-heading{
+//         font-size: 2em;
+//     }
+//     &:hover{
+//         background-color: red;
+//     }
+// }
+
+/* 
+jadi kita bisa menuliskan  seperti itu
+
+
+*/
+
+
+/* 
+5. mengambil nama dari parentnya
+
+nah parent selector ini bisa digunakan untuk
+mengambil nama dari parentnya 
+
+kita coba
+
+
+*/
+
+// .main {
+//     .main-heading{
+//         font-size: 2em;
+//     }
+//     .main-paragrahp{
+//         font-size: 1.2em;
+//     }
+//     &:hover{
+//         background-color: red;
+//     }
+// }
+
+/* 
+nah kalian bisa lihat 
+didalam main itu ada class yang namanya main-heading
+dan main-paragraph
+
+keduanya memiliki nama class main yang sama dengan class parentnya
+nah caranya kita bisa ganti depannya dengan tanda &
+
+maka dia mengganti nama mainnya dengan nama class parentnya
+
+
+*/
+
+// .main {
+//     & &-heading{
+//         font-size: 2em;
+//     }
+//     & &-paragrahp{
+//         font-size: 1.2em;
+//     }
+//     &:hover{
+//         background-color: red;
+//     }
+// }
+
+/* 
+kalo kita jalankan sama saja ya
+tapi perlu kalian ingat kalo parentnya itu tidak memiliki class
+maka dia akan mengambil nama tagnya 
+
+
+dan nanti ini sebenarnya bisa lebih kita permudah lagi 
+menggunakan teknik yang namanya interpolasi 
+
+jadi tidak perlu menulis 2kali
+tapi interpolasi itu akan kita pelajari dimateri yang lain
+
+tapi kalian cukup tahu saja 
+kita bisa menuliskannya seperti ini
+
+*/
+
+.main {
+    #{&}-heading{ // interpolasi
+        font-size: 2em;
+    }
+    & &-paragrahp{
+        font-size: 1.2em;
+    }
+    &:hover{
+        background-color: red;
+    }
+}
+
+
+/* 
+jadi dengan menggunakan interpolasi kalian 
+bisa melakukan seperti itu
+
+
+jadi itu konsep nesting yang bisa kita 
+gunakan didalam sass
+
+mudah mudahan kalian paham
+
+jadi sampai disini dulu materi kita kali ini
+kita akan ketemu lagi dimateri berikutnya
+dan seperti biasa jangan lupa titik koma ;
+
+
+
+*/

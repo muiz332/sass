@@ -1,0 +1,154 @@
+/* 
+
+dimateri kali ini kita akan membahas mengenai variable pada sass
+nah sebenarnya didalam css pun ada variable 
+
+nanti kita lihat bagaiman aperbedaan antara variable pada
+sass dan variable pada css
+
+kita langsung saja lihat implementasinya 
+bagaimana
+
+nah sebelum kita masuk ke variable sass
+sekarang css itu sudah memiliki fitur untuk membuat variable
+
+
+
+1. variable pada css
+
+nah kalo variable pada css itu seperti ini
+kita harus bikin si variablenya tersimpan kedalam sebuah 
+elemen tersebih dahulu
+
+nah biasanya jika variablenya itu ingin diakses kesemua element kita
+bisa menyimpannya kedalam root
+
+dan untuk variablenya kita menuliskan -- sebelum nama
+variablenya
+
+
+*/
+/* 
+jadi kita tinggal menggunakan fungsi var()
+lalu didalamnya kita kasih nama variablenya
+
+kekurangannya kalo menggunakan variable pada css
+ada kemungkinana bahwa browser tidak support
+karena ini masih teknologi css yang terbaru
+
+tapi untuk sekarang bisa support dibrowser 
+yang sering digunakan  seperti crome,edge mozila dll
+
+nah sekarang gimana caranya kalo kita mau menggunakan variable 
+punyanya sass ini
+
+
+*/
+/* 
+2. variable pada sass
+
+untuk menggunakan variable pada sass itu mirip dengan php
+jadi kita menggunakan tanda $ untuk membuat variable
+
+*/
+/* 
+didalam sass itu jika pemisahnya tanda -
+itu akan sama dengan tanda _
+
+*/
+/* 
+
+2. variable scope pada sass
+
+didalam sass juga memiliki variable scope atau batasan batasan untuk
+mengakses sebuah variable
+
+
+
+contohnya seperti ini
+
+kalo kalian tulis variable diluar
+itu adalah variable global artinya variable tersebut
+dapat kita panggil dimanapun
+
+seperti contoh diatas
+akan tetapi jika kalian menuliskan variablenya didalam sebuah
+element 
+
+seperti ini
+
+
+*/
+/* 
+jika kita tuliskan variablenya kedalam sebuah element
+maka variable tersebut akan menjadi variable local
+
+artinya variable tersebut dapat kita akses pada element itu
+dan element childnya
+
+diluar itu akan error
+
+
+
+*/
+/* 
+
+3.ubah variable local menjadi global
+
+nah sekarang ada caranya supaya variable yang dilocal
+berubah menjadi variable global
+
+cara nya diakhir dari valuenya kalian bisa tambahkan !global
+saat membuat variablenya
+
+*/
+/* 
+
+jika kita buat nama variable yang sama antara global dan local
+itu akan menjadi variable berbeda
+
+dan ketik variablen yang local itu dibuat menjadi global
+maka variablenya akan ditimpa dengna variable yang local
+
+*/
+/* 
+
+4.menyimpan banyak value kedalam sebuah variable
+
+nah didalam sass juga dapat menyimpan banyak value kedalam sebuah variable
+kalo didalam javascript itu mirip dengan object
+
+nah didalam sass itu ada yang disebut dengan map
+map ini adalah pasangan antara key dan value
+
+misalnya gini saya mau bikin sebuah alert
+dimana alert itu memiliki banyak warna
+
+seperti bootstrap ya
+jadi kalian bisa membuatnya seperti ini
+
+*/
+/* 
+jangan lupa akhiri titik koma
+nah untuk memanggilnya kita tinggal pakai
+map-get($alert,'danger')
+
+*/
+header {
+  background-color: green;
+}
+
+/* 
+nah itu lah cara kita membuat variable dengan menggunakan map
+nanti ini bisa lebih komplex lagi ketika kita belajar mixin
+
+jadi itu saja materi kali ini
+mudah mudahan kalian paham
+
+kita akan ketemu lagi dimateri berikutnya
+dan seperti biasa jangan lupa titik koma ;
+
+
+
+*/
+/*# sourceMappingURL=main.css.map */

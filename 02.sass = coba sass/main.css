@@ -1,0 +1,70 @@
+/* 
+nah kalo kalian lihat dibawah itu ada tulisah watch sass
+kalo kalian klik dia akan secara otomatis langsung 
+
+membuat file yang namanya sama tapi extentionnya berbeda yaitu .css dan ada juga yang
+.map yang ini kita abaikan dulu
+
+dan file main.cssnya tidak akan kita edit
+kita bikin belah layar ya antara scss dan cssnya 
+
+dan kalian harus pastikan status yang dibawah itu watching
+kita akan coba bikin sintax scss yang sederhana saja
+
+
+*/
+header {
+  background-color: red;
+}
+
+header h1 {
+  font-size: 2em;
+}
+
+header p {
+  color: red;
+}
+
+/* 
+kalo kita save otomatis disebelah kanan akan dibuatkan secara otomatis
+versi cssnya
+
+nah kita akan bikin variable juga ditas headernya
+
+nah jadi itu contoh penggunaan sederhana dari sintax scss
+yang merupakan bagian dari sass
+
+dan nanti kita akn belajar fitur fitur yang diberikah oleh sass
+dimateri materi berikutnya
+
+
+*/
+/* 
+
+alasan untuk tidak menggunakan sass
+
+- banyak fitur sass yang sekarang sudah dimiliki oleh css
+    seperti variable sekarang css sudah punya
+    lalu operator juga sudah punya menggunakan cal()
+    
+    walaupun juga ada fitur sass yang tidak dimiliki oleh css
+
+- tidak untuk project kecil
+- style component / css in js
+    jadi kalo pakai framework js orang orang sudah
+    beralih kesini
+
+
+meskipun begitu pemahaman css pre processor tetap dibutuhkan
+
+oke mungkin itu saja materi kali ini 
+mudah mudahan kalian paham
+
+dan seperti biasa jangan lupa titik koma ;
+
+
+
+
+
+*/
+/*# sourceMappingURL=main.css.map */

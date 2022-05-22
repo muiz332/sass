@@ -1,0 +1,227 @@
+// mixin
+
+/* 
+
+dimateri kali ini kita akan membahas mengenai mixin
+ini adalah salah satu fitur dari sass yang sering digunakan
+
+
+
+1. apa itu mixin
+
+mixin adalah kumpulan style yang dapat kita gunakan berulang
+ulang
+
+sama seperti function ya
+jadi nanti ketika kalian misalkan punya beberapa baris css yang sama
+itu bisa dijadikan mixin
+
+walaupun mixin ini tidak sama seperti function
+karena didalam sass nanti juga memiliki function
+
+nah sekarang kita lihat dulu bagaimana sass itu mengimplementasikan
+mixin ini
+
+nah untuk menggunakan mixin ini ada dua buah keyword
+yang harus kalian tau yaitu @mixin dan @include
+
+@mixin itu kita gunakan untuk membuat mixin
+sedangkan @include itu kita gunakan untuk menggil mixin
+
+untuk itu kita langsung saja coba implementasi dari mixin ini
+
+
+nah misalkan style ul dan li yang ada didalam header itu 
+sama dengan yang ada didalam footer
+
+dari pada kita menggunakan daftar list lebih baik 
+menggunakan mixin
+
+misalkan kita pakai css biasa saja
+
+*/
+
+// header nav ul, footer ul{
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+// }
+
+// header nav ul li, footer ul li{
+//     display: inline-block;
+// }
+
+// header nav ul a, footer ul a{
+//     text-decoration: none;
+// }
+
+
+/* 
+nah ini kalo kita menggunakan css biasa
+dan ini akan lebih komplex lagi ketia list yang ada didalam header itu 
+tombolnya tidak sama dengan yang ada didalam footer
+
+nah kita ubah dulu perilakunya menjadi sass
+
+*/
+
+
+/* 
+
+2. menggunakan mixin
+
+cara kita tulis seperti ini
+
+@mixin namanya (parameter,parameter){
+
+}
+
+kalo parameternya kosong itu boleh tidak
+menggunakan kurung
+
+*/
+
+
+@mixin inline_list(){
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+        display: inline-block;
+        a{
+            text-decoration: none;
+        }
+    }
+}
+
+/* 
+
+nah didalamnya itu bisa langsung kalian masukkan
+stylenya 
+
+dimana style ini akan kita masukkan kedalam ulnya
+nah sekarang tinggal kita pakai pada header dan footernya
+
+
+*/
+
+header nav ul{
+    @include inline_list();
+    li{
+        background-color: grey;
+        a{
+            color: white
+        }
+    }
+}
+
+footer ul{
+    @include inline_list();
+    li{
+        background-color: salmon;
+        padding: 0.7em;
+        a{
+            color: blue;
+        }
+    }
+}
+
+
+/* 
+
+jangan lupa akhiri pemanggilan mixinnya dengan titik koma
+nah ini kelihatannya lebih rapi ya
+
+nanti supaya lebih rapi lagi kita bisa pisahkan mixin kedalam file
+terpisah
+
+
+*/
+
+
+
+
+
+/* 
+
+3. arguments para mixin
+
+misalkan kita berikan argument pada mixin
+kita akan edit yang mainnya
+
+
+*/
+
+
+// main{
+//     width: 600px;
+//     height: 400px;
+//     background-color: #aeaaea;
+//     .box{
+//         width: 60px;
+//         height: 60px;
+//         background-color: green;
+//         text-align: center;
+//         line-height: 60px;
+//     }
+// }
+
+
+/* 
+
+nah misalnya kita buat mixin untuk mengatur
+tata letak dari boxnya
+
+kita bisa menggunakan flexbox 
+dan mungkin saja flexbox ini akan kita gunakan pada element
+lain untuk itu kita bisa buat menjadi mixin
+
+*/
+
+
+@mixin flex-box($justify : center, $direc : row){
+
+    /* nah kalian bisa menambahkan nilai defautlnya seperti itu ya */
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    flex-direction: $direc;
+}
+
+main{
+    width: 600px;
+    height: 400px;
+    background-color: #aeaaea;
+    @include flex-box($direc : row-reverse,$justify : space-around);
+
+    /* 
+    nah kalian bisa memasukkan argumentnya itu tidak sesuai urutannya
+    tapi kalian harus menuliskan dulu nama variablenya apa
+    
+    */
+
+    .box{
+        width: 60px;
+        height: 60px;
+        background-color: green;
+        text-align: center;
+        line-height: 60px;
+    }
+}
+
+
+
+
+/* 
+
+oke mungkin itu saja materi kali ini 
+kita akan singgung mixin lagi ketika kita membahas mengenai modul
+
+sampai disini dulu materi kali ini
+mudah mudahan kalian paham
+
+dan seperti biasa
+jangan lupa titik koma;
+
+
+*/

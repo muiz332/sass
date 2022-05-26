@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/* 
+
+anggap saja gini use mengembalikan object dengan 
+sesuai nama foldernya
+
+jadi kalo kita memanggil mixinnya kalian bisa tulis seperti ini
+
+@include mixin.inline_list();
+
+tapi ada masalah lagi nih 
+kalo misalkan pathnya itu panjang kalian tidak bisa menuliskannya 
+seperti itu
+
+jadi kalian harus ubah dulu nama folder nya
+misal
+
+@use 'mixins/mixin' as mixin
+
+jadi kita bisa mengubahnya seperti itu
+jangan lupa perbaiki juga dibagian yang lain
+
+
+
+*/
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header nav ul li {
+  display: inline-block;
+}
+header nav ul li a {
+  text-decoration: none;
+}
+header nav ul li {
+  background-color: grey;
+}
+header nav ul li a {
+  color: white;
+}
+
+main {
+  width: 600px;
+  height: 400px;
+  background-color: #aeaaea;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+main .box {
+  width: 60px;
+  height: 60px;
+  background-color: green;
+  text-align: center;
+  line-height: 60px;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+footer ul li {
+  display: inline-block;
+}
+footer ul li a {
+  text-decoration: none;
+}
+footer ul li {
+  background-color: salmon;
+  padding: 0.7em;
+}
+footer ul li a {
+  color: blue;
+}
+
+/* 
+
+Kekurangan import
+
+kenapa import tidak lagi disarankan bahkan oleh sisassnya
+kita lihat diwebsitenya dulu
+
+1. secara global dapat diakses
+    import membuat semua variable, mixin, dan function itu akan secara 
+    global dapat diakses 
+
+    disatu sisi memudahkan kita untuk memanggilnya 
+    dan ini akan menyulitkan ketika website kita semakin besar cssnya 
+    makin banyak bahkan kita juga akan menggunakan framework css
+
+    jadi akan tercampur 
+    nah mungkin aja nama variablenya itu ada yang sama 
+    misalkan kita memberikan nama variable width
+
+    kan itu umum banget ya 
+    mungkin juga framework lain juga pakek itu
+
+    kalo namanya sama itu akan bentrok
+    cara mengatasinya kita gunakan prefix untuk menandai bahwa itu punya kita
+    jadinya agak ribet gitu 
+
+2. extend rules
+    jadi nanti akan susah ketika masuk kepewarisan
+    atau inheritance makin lama makin bingung gitu
+
+    style yang nama yang diwariskan
+
+3. memanggil import
+    nah kalo kita memanggil import berulang kali itu waktu compilernya
+    jadi lebih besar
+
+
+
+nah untuk menghindari masalah masalah tersebut kita harus menggunakan @use
+kalo kalian sudah terlanjut pakai import ada caranya untuk migrasi secara otomatis
+cuma ini tidak akan kita bahas ,kalian bisa check didocumentasinya
+
+jadi sarannya kalian bisa pakai use
+nah tapi ada problem baru nih kalo pakai use
+
+disamping tadi menghindari masalah masalah yang fatal 
+terutama masalah bentrok tadi
+
+sass itu ada beberapa type, sass yang kalian gunakan diVS code itu itu namanya lip sass
+kalo sassnya itu kalian install dimesin kalian itu typenya dart sass 
+
+nah sayangnya use itu hanya dapat kita gunakan pada dart sass
+artinya kita harus install sassnya dikomputer kita
+
+kalian bisa install menggunakan npm atau kalian bisa 
+download saja untuk 
+
+
+kalo sudah kita akan lakukan hal yang sama tapi tidak menggunakan import
+melainkan menggunakan use
+
+
+
+
+
+*/
+/* 
+
+nah kalo pakai use kita tidak bisa langsung mengganti importnya dengan use
+seperti ini
+
+*/
+/* 
+
+untuk menjalankannya kalian bisa ketikan seperti ini 
+
+sass scss/main.scss css/main.css
+
+jadi ini bacanya sass tolong ubah file yang adad dialam folder
+scss dengan nama main.scss ubah menjadi
+
+main.css dan masukkan kedalam folder css
+
+kalo kalian jalankan maka akan jalan adalah dart sassnya
+dan ada pesan errornya
+
+Error: Undefined mixin.
+  ╷
+2 │     @include inline_list();
+  │     ^^^^^^^^^^^^^^^^^^^^^^
+
+
+katanya mixinya tidak ada
+nah kenapa error padahal sudah saya panggil dulu mixinnya didalam file main.scss
+lalu didalam module header tinggal panggil disitu
+
+kalo pakai import tadi gampang banget langsung bisa jalan
+karena mixinnya berbentuk global
+
+nah sekarang kalo kita pakai use gimana?
+kita tidak menuliskannya didalam file main.scssnya
+
+tapi kita panggilnya didalam file yang membutuhkan saja
+kita pergi kemodule header
+
+
+
+*/
+/* 
+
+kalo sudah kita tinggal jalankan 
+kalo kita jalankan hasilnya akan sama ya
+
+
+
+
+*/
+
+/*# sourceMappingURL=main.css.map */

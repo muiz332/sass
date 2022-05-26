@@ -1,0 +1,9 @@
+header nav ul{
+    @include inline_list();
+    li{
+        background-color: grey;
+        a{
+            color: white
+        }
+    }
+}

@@ -1,0 +1,39 @@
+
+//nah kita nulis usenya itu disini
+
+@use 'mixin';
+
+/* 
+
+anggap saja gini use mengembalikan object dengan 
+sesuai nama filenya
+
+jadi kalo kita memanggil mixinnya kalian bisa tulis seperti ini
+
+@include mixin.inline_list();
+
+tapi ada masalah lagi nih 
+kalo misalkan pathnya itu panjang kalian tidak bisa menuliskannya 
+seperti itu
+
+jadi kalian harus ubah dulu nama folder nya
+misal
+
+@use 'mixins/mixin' as mixin
+
+jadi kita bisa mengubahnya seperti itu
+jangan lupa perbaiki juga dibagian yang lain
+
+
+
+*/
+
+header nav ul{
+    @include mixin.inline_list();
+    li{
+        background-color: grey;
+        a{
+            color: white
+        }
+    }
+}

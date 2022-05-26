@@ -1,0 +1,13 @@
+@use 'mixin';
+
+
+footer ul{
+    @include mixin.inline_list();
+    li{
+        background-color: salmon;
+        padding: 0.7em;
+        a{
+            color: blue;
+        }
+    }
+}

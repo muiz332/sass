@@ -1,0 +1,88 @@
+
+// modules
+
+
+
+@import 'mixin';
+@import 'header';
+@import 'main';
+@import 'footer';
+
+
+/* 
+
+jadi kalian bisa memisah misahkan bagian bagian tertentu pada
+sebuah halaman web seperti react
+
+jadi didalam file main scssnya cuma ada import saja
+nanti akan dicompile menghasilkan file css
+
+kalo kita jalankan maka hasilnya akan tetap sama
+
+atau kalian bisa bikin folder lagi
+namanya  module dan kalian bisa pisahkan module modulenya kedalam folder
+tersebut
+
+kalian bisa satu folder didalam scss
+yang namanya modules misalnya
+
+nanti kalian tinggal import
+
+@import 'modules/mixin'
+
+jadi itu ya penggunaan sederhana dari import
+kalian tinggal pisah pisahkan saja mana yang mau kalian pisahkan kedalam 
+parsial sendiri sendiri
+
+nah sekarang saya akan memberitahu kekurangan menggunakan
+import ini
+
+
+
+
+
+Kekurangan import
+
+kenapa import tidak lagi disarankan bahkan oleh sisassnya
+kita lihat diwebsitenya dulu
+
+1. secara global dapat diakses
+    import membuat semua variable, mixin, dan function itu akan secara 
+    global dapat diakses 
+
+    disatu sisi memudahkan kita untuk memanggilnya 
+    dan ini akan menyulitkan ketika website kita semakin besar cssnya 
+    makin banyak bahkan kita juga akan menggunakan framework css
+
+    jadi akan tercampur 
+    nah mungkin aja nama variablenya itu ada yang sama 
+    misalkan kita memberikan nama variable width
+
+    kan itu umum banget ya 
+    mungkin juga framework lain juga pakek itu
+
+    kalo namanya sama itu akan bentrok
+    cara mengatasinya kita gunakan prefix untuk menandai bahwa itu punya kita
+    jadinya agak ribet gitu 
+
+2. extend rules
+    jadi nanti akan susah ketika masuk kepewarisan
+    atau inheritance makin lama makin bingung gitu
+
+    style yang nama yang diwariskan
+
+3. memanggil import
+    nah kalo kita memanggil import berulang kali itu waktu compilernya
+    jadi lebih besar
+
+
+
+nah untuk menghindari masalah masalah tersebut kita harus menggunakan @use
+kalo kalian sudah terlanjut pakai import ada caranya untuk migrasi secara otomatis
+cuma ini tidak akan kita bahas 
+
+kalian bisa check didocumentasinya
+
+
+
+*/

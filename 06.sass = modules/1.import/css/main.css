@@ -1,0 +1,171 @@
+/* 
+
+
+nah diamteri kali ini kita akan belajar mengenai module
+atau ini adalah sebuah teknik untuk membuat code sass kita menjadi modular
+
+dan untuk menerapkan module ini kita butuh dua keyword
+yaitu @import dan @use
+
+nanti kita akan lihat perbedaan dari kedua keyowrd ini
+tapi perlu kalian ketahui @import ini adalah keyword yang 
+lama dan oleh sassnya saat ini tidak disarankan untuk mengunakan
+@import ini
+
+sassnya menyarankan untuk mulai menggunakan @use
+nah tapi kenapa kita akan bahas keduanya karena
+masih banyak yang membahas mengenai import dan 
+nanti kalian bisa lihat bagaimana perbedaanya
+
+dan nanti kalian tentukan sendiri akan menggunakan 
+@import atau @use
+
+disini kita akan membahas dulu menggunakan import
+lalu bagaimana cara pakainya?
+
+kita akan lihat langsung ke study kasus kita
+nah kita akan mulai menggunakan code dari 
+materi sebelumnya
+*/
+/* 
+
+nah sepertinya sedikit ya
+tapi bayangkan ketika file css kalian itu sudah banyak
+
+nah dengan menggunakan import ini bisa
+memisahkan bagian bagian yang ada didalam file scss kita
+
+contohnya kita sudah buat mixin inline_list ya
+yang kita gunakan beberapa kali
+
+dan kita juga punya mixin flex-box
+nah sekarang idenya saya ingin memisahkan mixin
+kedalam satu file terpisah supaya lebih rapi
+
+kalo dibahasa pemrograman yang lain itu 
+kita bisa memisahkan function function 
+kedalam file terpisah
+
+jadi kalian bisa bikin file baru didalam folder scss
+tapi file barunya harus diawali dengan tanda _
+
+nah kenapa menggunakan underscor didalamnya?
+yang pertama menandakan bahwa dia bukan file utama pada scss
+yang kedua file yang ada underscor didepannya tidak akan
+melalui proses compilasi
+
+karena scssnya tahu bahwa file ini yang nanti akan dipanggil
+oleh file scss utama
+
+kita masukkan semua mixin kedalam file _mixin.scss
+nah untuk menggunakan mixinnya kita tinggal import
+
+@import 'nama filenya';
+
+kalian harus hati hati saat ini import
+sudah diadobsi oleh css
+
+jadi css biasa tanpa menggunakan pre procssor sass
+itu ada fitur @import
+
+biar tidak tertukar @import pada css itu lengkap nama pathnya beserta extensinya
+sedangkan di sass itu cukup nama filenya saja
+
+nah ini juga nanti salah satu alasan kenapa kita 
+tidak lagi menggunakan import
+
+
+
+
+*/
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  text-decoration: none;
+}
+
+header nav ul li {
+  background-color: grey;
+}
+
+header nav ul li a {
+  color: white;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+footer ul li a {
+  text-decoration: none;
+}
+
+footer ul li {
+  background-color: salmon;
+  padding: 0.7em;
+}
+
+footer ul li a {
+  color: blue;
+}
+
+main {
+  width: 600px;
+  height: 400px;
+  background-color: #aeaaea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+main .box {
+  width: 60px;
+  height: 60px;
+  background-color: green;
+  text-align: center;
+  line-height: 60px;
+}
+
+/* 
+
+kalo kita save kita jalakan
+itu hasilnya akan sama ya
+
+jadi dengan menggunakan import kita bisa 
+memanggil file lain
+
+nah ini memudahkan kalian ketika mau memisah misahkan 
+antara mixin dengan scssnya 
+
+atau kalian  juga bisa memisahkan variablenya
+atau kalian bisa memisahkan pengaturan scssnya berdasarkan bagian bagian
+pada halamannya 
+
+contohnya kalian bisa membuat header kedalam file sendiri
+
+
+*/
+/*# sourceMappingURL=main.css.map */

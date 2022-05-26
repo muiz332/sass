@@ -1,0 +1,14 @@
+main{
+    width: 600px;
+    height: 400px;
+    background-color: #aeaaea;
+    @include flex-box($direc : row-reverse,$justify : space-around);
+
+    .box{
+        width: 60px;
+        height: 60px;
+        background-color: green;
+        text-align: center;
+        line-height: 60px;
+    }
+}

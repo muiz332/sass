@@ -1,0 +1,30 @@
+/* 
+
+nah disini kita akan coba dulu menggunakan if
+kita bikin misalnya didalam mixin 
+
+*/
+.circle {
+  width: 100px;
+  height: 100px;
+  border: 5px solid white;
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  border: 5px solid white;
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* 
+
+jadi didlaam mixinya kalian bisa check nilai boolean
+mau dibuat bulat atau tidak
+
+*/
+/*# sourceMappingURL=main.css.map */

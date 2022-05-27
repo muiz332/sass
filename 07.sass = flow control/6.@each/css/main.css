@@ -1,0 +1,46 @@
+/* 
+
+anh @each ini digunakan untuk melooping map
+jadi map itu adalah variable yang memiliki nilai yang banyak
+
+seperti object didalam javascript
+
+
+*/
+ul {
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul .youtube {
+  color: red;
+}
+
+ul .instargam {
+  color: salmon;
+}
+
+ul .facebook {
+  color: blue;
+}
+
+/* 
+
+jadi pada each itu kita bisa ambil keyny6a dan valuenya 
+pada variable kedua
+
+kita bisa gunkan keynya menjadi class 
+lalu ambil warnanya sesuai classnya
+
+jadi seperti itu penggunaan dari flow control pada sass
+mudah mudahan kalian paham
+
+jadi itu saja untuk materi kali ini
+kita akan ketemu lagi dimateri berikutnya
+
+dan seperti biasa jangan lupa titik koma ; 
+
+
+
+*/
+/*# sourceMappingURL=main.css.map */

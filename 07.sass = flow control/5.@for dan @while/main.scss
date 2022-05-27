@@ -1,0 +1,87 @@
+// for
+
+/* 
+
+kita sudah buat list nah sekarang
+saya ingin tiap tiap linya itu berbeda warnanya
+
+nah kita bisa looping urutan dari element tersebut 
+menggunakan pseudo class
+
+jika tidak menggunakan for maka kalian 
+harus menyeleksi satu satu linya
+
+jika menggunakan for kalian bisa
+melakukan seperti ini
+
+untuk sintax for itu seperti ini
+
+@for $i from 1 to 10
+
+jadi inya akan dimulai dari angka 1 sampai 10 atau 1 < 10
+jadi tidak perlu ada kondisi dan increment atau decrement
+
+
+
+*/
+
+/* 
+kita tidak bisa langsung mengakses vaiablenya
+jadi kita harus menggunakan interpolasi
+
+atau kalo didalam javascript itu template string
+
+dan kalo didalam sass index itu dimulai dari 1 bukan 0
+
+*/
+
+/* 
+kita bisa menggunakan fungsi untuk mengubah menjadi terang
+menggunakan lighten atau menjadi gelap menggunakan darken
+
+*/
+
+// ul{
+//     padding: 0;
+//     margin: 0;
+//     list-style: none;
+
+//     @for $i from 1 to 11 {
+//         li:nth-child(#{$i}){
+//             padding: 4px;
+//             background-color: lighten($color: salmon, $amount: $i * 2%);
+//         }
+//     };
+
+// }
+
+
+
+// menggunakan while
+
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    $i: 1;
+    @while $i < 11 {
+        li:nth-child(#{$i}){
+            padding: 4px;
+            background-color: lighten($color: salmon, $amount: $i * 2%);
+        }
+
+        $i : $i +1;
+    };
+
+}
+
+
+/* 
+
+jadi itu menggunakan while
+sama seperti bahasa pemrograman ada nilai awal
+ada kondisi dan ada increment atau decrement
+
+
+*/

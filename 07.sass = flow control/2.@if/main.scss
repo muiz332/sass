@@ -1,0 +1,37 @@
+// @if
+
+/* 
+
+nah disini kita akan coba dulu menggunakan if
+kita bikin misalnya didalam mixin 
+
+*/
+
+@mixin profile-picture($size,$circle: false){
+    width: $size;
+    height: $size;
+    border: 5px solid white;
+    box-shadow: 1px 1px 3px 0px rgba($color: #000, $alpha: .1);
+
+    @if($circle){
+        border-radius: 50%;
+    }
+
+
+};
+
+
+.circle{
+    @include profile-picture(100px, true)
+}
+
+.square{
+    @include profile-picture(200px, )
+}
+
+/* 
+
+jadi didlaam mixinya kalian bisa check nilai boolean
+mau dibuat bulat atau tidak
+
+*/

@@ -1,0 +1,42 @@
+/* flow control */
+
+
+/* 
+
+
+
+dimateri kali ini kita akan membahas sesuai yang seru yaitu
+flow control atau alur kendali dar program sass kita
+
+nah fitur ini menyerupai bahasa pemrograman yang biasa
+kita gunakan seperti javascript,php pyhon
+
+karena css itu bukan bahasa pemrograman ya dia hanya styling saja
+tapi dengan menggunakan sass ini kita bisa mengatur alur kendali dari 
+program kita
+
+mirip dengan bahasa pemrograman pada umumnya
+keyword yang bisa kita gunakan ada beberapa
+
+@if
+@else if
+@else
+@for
+@while
+@each
+
+nah kita langsung saja coba masing masing dari keyword
+tersebut
+
+dan untuk implementasinya akan jarang kalian temui 
+tapi kalo misalkan ada kasus yang mengharuskan kalian
+menggunakan flow control kalian bisa pakai dengan mudah
+
+untuk itu kita langsung saja lihat gimana cara pakainya
+
+
+
+
+
+
+*/

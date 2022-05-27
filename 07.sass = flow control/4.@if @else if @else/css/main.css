@@ -1,0 +1,80 @@
+/* 
+
+nah sekarang kita coba yang else if
+misalkan kita akan bikin icon segitiga
+
+sebetulnya untuk bikin segitiga itu kita bisa 
+menggunakan bantuan border
+
+saya kasih contoh dulu
+
+
+*/
+.triangle {
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 2em;
+  border-right-color: black;
+}
+
+/* 
+
+jadi kita bisa membuat segitiga menggunakan border
+kita bisa kasih border yang right warnanya black
+
+untuk membuat agar segitiganya menghadap kekiri
+kita akan buat element lagi yang atau div lagi yang
+itu segitiganya menghadap sudut tertentu
+
+kanan kiri atas atau bawah
+kita buat mixin dulu
+
+
+
+*/
+.right {
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1em;
+  border-right-color: green;
+}
+
+.left {
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1em;
+  border-left-color: green;
+}
+
+.bottom {
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1em;
+  border-bottom-color: green;
+}
+
+.top {
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1em;
+  border-top-color: green;
+}
+
+/* 
+
+nah jadi kita tinggal check arah segitiganya
+jadi seperti itu penggunaan dari pengkondisian atau percabangan pada sass
+
+
+*/
+/*# sourceMappingURL=main.css.map */

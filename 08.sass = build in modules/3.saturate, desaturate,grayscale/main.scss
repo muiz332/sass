@@ -1,0 +1,58 @@
+// build in modules
+
+
+/* 
+
+nah selanjutnya kita akan belajar mengenai saturate,desaturate, dan grayscale
+saturate digunakan untuk meningkatkan kemurnian warna
+contoh
+
+
+*/
+
+h1,h2,h3{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+
+
+
+$warna-dasar:salmon;
+
+h1{
+    color: saturate($color: $warna-dasar, $amount: 30);
+}
+
+
+/* 
+
+kita coba yang desaturate
+
+*/
+
+h2{
+    color: desaturate($color: salmon, $amount: 20);
+}
+
+
+/* 
+
+kalo desturate itu warnanya akan semakin hilang
+kalo kaian tambahin 100% maka warnanya akan semakin abu abu
+
+*/
+
+h3{
+    color: grayscale($color: salmon);
+}
+
+
+/* 
+
+nah ini akan membuat warna kalian menjadi desaturate 100%
+jadi sama saja kalo kaian menggunakan desaturate 100% pada
+warna kalian
+
+
+*/

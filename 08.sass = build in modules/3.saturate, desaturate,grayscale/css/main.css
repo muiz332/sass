@@ -1,0 +1,48 @@
+/* 
+
+nah selanjutnya kita akan belajar mengenai saturate dan desaturate
+saturate digunakan untuk meningkatkan kemurnian dari warna
+yang kita gunakan
+
+contoh
+
+
+*/
+h1, h2, h3 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+h1 {
+  color: #ff7c6d;
+}
+
+/* 
+
+kita coba yang desaturate
+
+*/
+h2 {
+  color: #eb8c81;
+}
+
+/* 
+
+kalo desturate itu warnanya akan semakin hilang
+kalo kaian tambahin 100% maka warnanya akan semakin abu abu
+
+*/
+h3 {
+  color: #b6b6b6;
+}
+
+/* 
+
+nah ini akan membuat warna kalian menjadi desaturate 100%
+jadi sama saja kalo kaian menggunakan desaturate 100% pada
+warna kalian
+
+
+*/
+/*# sourceMappingURL=main.css.map */

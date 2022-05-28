@@ -1,0 +1,73 @@
+/* 
+
+nah selanjutnya kita akan belajar mengenai mix,fade in dan fade out
+
+mix digunakan untuk mencampur dua warna
+
+
+*/
+h1, h2, h3 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+h1 {
+  color: #321ae3;
+}
+
+/* 
+
+diparameter ketiga itu ada kadar penyampuran warnanya
+kalo misalkan saya tulis 20% itu artinya warna
+yang salmon 20% sisanya adalah warna blue
+
+kalo misalkan 80% ya warna salmonya 80% sisasnya warna
+blue
+
+
+nah ini ada dua terakhir
+ini ada hubungannya dengan opacity
+
+ada yang namanya fade in
+ini untuk membuat element yang transparan menjadi solid
+
+
+*/
+h2 {
+  color: rgba(250, 128, 114, 0.8);
+}
+
+/* 
+
+jadi pada warnya saya kasih transparansinya itu 0.2 
+nah saya akan tambah transparansinya dengan 0.6
+
+maka warnanya akan semakin solid
+
+nah sekarang lwannya adalah fade out
+jadi dia mengurangi transparansinya
+
+*/
+h3 {
+  color: rgba(250, 128, 114, 0.4);
+}
+
+/* 
+
+nah dia akan membuat trasparan sebanyak 0.6
+
+oke jadi seperti itu penggunaan dari build in function 
+atau build in modules pada sass
+
+untuk yang lain kalian bisa coba coba sendiri ya
+lihat saja didocumentasinya
+
+jadi itu saja untuk materi kali ini
+kita akan ketemu lagi dimateri berikutnya 
+
+dan seperti biasa jangan lupa titik koma ;
+
+
+*/
+/*# sourceMappingURL=main.css.map */

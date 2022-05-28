@@ -1,0 +1,140 @@
+// build in modules
+
+
+/* 
+
+dimateri kali ini kita akan membahas mengenai build in modules
+jadi ini sebenarnya adalah fungsi bawaan dari sass
+
+jadi ada banyak ya kita bisa pakai 
+
+- color
+- list
+- map
+- math
+- meta
+- selector
+- string
+
+nah itu adalah jenis jenis fungsi didalam sass
+tapi yang akan kita bahas dimateri kali ini adalah color
+
+untuk yang lainnya kalian bisa baca sendiri didocumentasinya
+kita akan fokus dicolor saja
+
+bagaimana cara memilih warna sehingga kita tidak bingung
+saat memilih warna
+
+jadi sebenarnya bebarpa fungsinya sudah kita coba ya
+untuk daftar lengkapnya ini yang bisa kalian lakukan
+
+- adjust
+- complement
+- darken
+- lighten
+- saturate
+- desaturate
+- grayscale
+- mix
+- fade-in
+- fade-out
+
+
+nah nanti kita akan coba satu satu build in modules ini
+seperti apa
+
+jadi kita langsung coba saja
+
+
+*/
+
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+
+
+/* 
+
+yang pertama kita akan menggunakan adjust
+untuk sintaxnya seperti ini
+
+color.adjust($color,
+  $red: null, $green: null, $blue: null,
+  $hue: null, $saturation: null, $lightness: null,
+  $whiteness: null, $blackness: null,
+  $alpha: null)
+adjust-color(...) //=> color 
+
+
+jadi parameter pertama kita bisa kasih warna dasar
+lalu parameter selanjutnya itu kita bisa kasih tambahan warna
+
+atau kita bisa geser roda warnanya 
+lalu ada sarutartionnya warnanya makin muncul
+lightness warnanya makin terang
+
+dan seterusnya
+
+nah kita coba pada h1
+dan saya cukup menambahkan tambahan warnanya saja
+untuk hue dan seterusnya itu nanti
+
+*/
+
+// $warna-dasar:salmon;
+
+// h1{
+//     color: $warna-dasar;
+//     color: adjust-color($color: $warna-dasar, $red: 30, $green: -100, $blue: 1);
+// }
+
+/* 
+
+jadi kita harus menambahkan warna dasarnya dulu ya
+kalian bisa tulis rgb seperti itu atau satu satu
+
+misanya hanya menambahkan warna red atau hijau bisa juga
+tanpa harus rgb ya dan kita juga bisa memberikan value yang negatif
+
+jadi kita bisa memanipulasi warna menggunakan adjust color
+
+nah sekarang kita akan menggunakan hue
+kalian bisa pecah ya sama seperti css
+
+adjusthue($color: $warna-dasar, $degrees: 0)
+
+diparameter pertama ada warnanya dan diparameter kedua ada degree
+yaitu kita bisa putar warnanya berapa derajat
+
+jadi ktia tahu hue itu adalah warna yang terletak pada roda warna
+kalian bisa check di adobe color
+
+*/
+
+$warna-dasar:salmon;
+
+h1{
+    color: $warna-dasar;
+    color: adjust-hue($color: $warna-dasar, $degrees: 30deg);
+}
+
+
+/* 
+
+jadi kalo saya tulis 30deg itu akan mengutar berlawanan arah jarum
+jam jadi arahnya keatas kalo kalian copy warnanya
+dan paste di adobe color nanti akan kelihatan
+bahwa warnanya bergeser keatas
+
+jadi dia menggesernya lurusnya tidak keatas atau kebawah
+kalo keatas atau kebawah itu ada caranya lagi
+
+kalo derajatnya positif dia keatas kalo negatif dia kebawah
+
+jadi seperti itu kalo ingin mengubah warnanya menggunakan
+adjust
+
+
+*/
